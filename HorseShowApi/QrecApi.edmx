@@ -1,0 +1,1737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Show2Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Catalog">
+          <Key>
+            <PropertyRef Name="CatalogId" />
+          </Key>
+          <Property Name="CatalogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HorseRegistrationId" Type="int" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="RegistrationReferenceNo" Type="int" />
+          <Property Name="HorseNameEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="SireEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="SireAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="DamEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="DamAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="50" />
+          <Property Name="SexAr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Color" Type="nvarchar" MaxLength="50" />
+          <Property Name="ColorAr" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="HorseBreederName" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseBreederNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseBreederAddress" Type="nvarchar(max)" />
+          <Property Name="HorseBreederAdreessAr" Type="nvarchar(max)" />
+          <Property Name="HbCountryEn" Type="nvarchar" MaxLength="50" />
+          <Property Name="HbCountryAr" Type="nvarchar" MaxLength="50" />
+          <Property Name="HorsePassportCopy" Type="nvarchar" MaxLength="255" />
+          <Property Name="OwnerName" Type="nvarchar" MaxLength="255" />
+          <Property Name="OwnerNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="AddressEn" Type="nvarchar(max)" />
+          <Property Name="AddressAr" Type="nvarchar(max)" />
+          <Property Name="POBox" Type="nvarchar" MaxLength="255" />
+          <Property Name="POBoxAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="CityAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Country" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryAr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="50" />
+          <Property Name="TelephoneAr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="50" />
+          <Property Name="FaxAr" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobileAr" Type="nvarchar" MaxLength="50" />
+          <Property Name="ECAHOClasses" Type="nvarchar(max)" />
+          <Property Name="ECAHOClassesAr" Type="nvarchar" MaxLength="200" />
+          <Property Name="NonECAHOClasses" Type="nvarchar" MaxLength="200" />
+          <Property Name="NonECAHOClassesAr" Type="nvarchar" MaxLength="200" />
+          <Property Name="OwnerPassportCopy" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateEn" Type="datetime" />
+          <Property Name="IsApprove" Type="bit" />
+          <Property Name="ShowNameHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="ShowNameHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateHr" Type="datetime" />
+          <Property Name="ClassHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClassHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlaceHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlaceHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryHrEn" Type="nvarchar" MaxLength="200" />
+          <Property Name="CountryHrAr" Type="nvarchar" MaxLength="200" />
+          <Property Name="PositionHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="PositionHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="CatalogNumber" Type="int" />
+          <Property Name="IsCatalogDelete" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsCompleted" Type="bit" />
+          <Property Name="RatedJudgesIDList" Type="nvarchar" MaxLength="60" />
+          <Property Name="RatingDone" Type="bit" />
+          <Property Name="MobileCountry" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsExceptionCase" Type="bit" />
+          <Property Name="OwnerPassportImageName" Type="nvarchar" MaxLength="100" />
+          <Property Name="HorsePassportImageName" Type="nvarchar" MaxLength="100" />
+          <Property Name="RegisterUserName" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClassName" Type="nvarchar" MaxLength="100" />
+          <Property Name="IsSplit" Type="bit" Nullable="false" />
+          <Property Name="HorseScore" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Type" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Moves" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="BaseClassName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ShowHorseActive" Type="bit" />
+          <Property Name="Rank" Type="int" />
+          <Property Name="ChampionshipScore" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ChamionshipId" Type="int" />
+          <Property Name="WinnerTypeId" Type="int" />
+        </EntityType>
+        <EntityType Name="Championship">
+          <Key>
+            <PropertyRef Name="ChampionshipId" />
+          </Key>
+          <Property Name="ChampionshipId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChampionshipName" Type="nvarchar" MaxLength="120" />
+        </EntityType>
+        <EntityType Name="ChampionshipClasses">
+          <Key>
+            <PropertyRef Name="ChampionshipClassesId" />
+          </Key>
+          <Property Name="ChampionshipClassesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChampionshipId" Type="int" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="ShowClassId" Type="int" />
+        </EntityType>
+        <EntityType Name="ChampionshipMethod">
+          <Key>
+            <PropertyRef Name="ChampionshipMethodId" />
+          </Key>
+          <Property Name="ChampionshipMethodId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChampionshipMethodName" Type="nvarchar" MaxLength="120" />
+        </EntityType>
+        <EntityType Name="ChampionshipRating">
+          <Key>
+            <PropertyRef Name="ChampionshipRatingId" />
+          </Key>
+          <Property Name="ChampionshipRatingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WinnerTypeId" Type="int" />
+          <Property Name="ChampionShipJudgeId" Type="int" />
+          <Property Name="HorseCatalog" Type="int" />
+          <Property Name="IpadUdid" Type="nvarchar" MaxLength="120" />
+          <Property Name="Showid" Type="int" />
+          <Property Name="ChampionshipId" Type="int" />
+        </EntityType>
+        <EntityType Name="ChampionshipWinnertype">
+          <Key>
+            <PropertyRef Name="ChampionshipWinnertypeId" />
+          </Key>
+          <Property Name="ChampionshipWinnertypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="WinnertypeId" Type="int" />
+          <Property Name="ChampionshipId" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryName" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="EcahoClass">
+          <Key>
+            <PropertyRef Name="EcahoClassId" />
+          </Key>
+          <Property Name="EcahoClassId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EcahoClassName" Type="nvarchar" MaxLength="120" />
+        </EntityType>
+        <EntityType Name="Horse">
+          <Key>
+            <PropertyRef Name="HorseId" />
+          </Key>
+          <Property Name="HorseId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HorseName" Type="nvarchar" MaxLength="60" />
+          <Property Name="HorsePassport" Type="nvarchar" MaxLength="60" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="OwnerName" Type="nvarchar" MaxLength="60" />
+          <Property Name="OwnerAddress" Type="nvarchar" MaxLength="120" />
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="IsApprove" Type="bit" />
+        </EntityType>
+        <EntityType Name="HorseRegistration">
+          <Key>
+            <PropertyRef Name="HorseRegistrationId" />
+          </Key>
+          <Property Name="HorseRegistrationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegistrationReferenceNo" Type="int" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="HorseNameEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="SireEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="SireAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="DamEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="DamAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="255" />
+          <Property Name="SexAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Color" Type="nvarchar" MaxLength="255" />
+          <Property Name="ColorAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="HorseBreederName" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseBreederNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseBreederAddress" Type="nvarchar(max)" />
+          <Property Name="HorseBreederAdreessAr" Type="nvarchar(max)" />
+          <Property Name="HbCountryEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="HbCountryAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorsePassportCopy" Type="nvarchar(max)" />
+          <Property Name="OwnerName" Type="nvarchar" MaxLength="255" />
+          <Property Name="OwnerNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="AddressEn" Type="nvarchar(max)" />
+          <Property Name="AddressAr" Type="nvarchar(max)" />
+          <Property Name="POBox" Type="nvarchar" MaxLength="255" />
+          <Property Name="POBoxAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="CityAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Country" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="255" />
+          <Property Name="TelephoneAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="255" />
+          <Property Name="FaxAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="255" />
+          <Property Name="MobileAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="ECAHOClasses" Type="nvarchar" MaxLength="255" />
+          <Property Name="ECAHOClassesAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="NonECAHOClasses" Type="nvarchar" MaxLength="255" />
+          <Property Name="NonECAHOClassesAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="OwnerPassportCopy" Type="nvarchar(max)" />
+          <Property Name="DateEn" Type="datetime" />
+          <Property Name="IsApprove" Type="bit" />
+          <Property Name="ShowNameHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="ShowNameHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateHr" Type="datetime" />
+          <Property Name="ClassHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClassHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlaceHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlaceHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="PositionHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="PositionHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsCatalogDelete" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Judge">
+          <Key>
+            <PropertyRef Name="JudgeId" />
+          </Key>
+          <Property Name="JudgeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="60" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="60" />
+          <Property Name="CountryId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MainClass">
+          <Key>
+            <PropertyRef Name="MainClassId" />
+          </Key>
+          <Property Name="MainClassId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClassName" Type="nvarchar" MaxLength="120" Nullable="false" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="StartDate" Type="datetime" Nullable="false" />
+          <Property Name="EndDate" Type="datetime" Nullable="false" />
+          <Property Name="CreatedBy" Type="int" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="ModifiedBy" Type="int" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="ClassAbv" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="MenuId" />
+          </Key>
+          <Property Name="MenuId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MenuUrl" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Rating">
+          <Key>
+            <PropertyRef Name="RatingId" />
+          </Key>
+          <Property Name="RatingId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowClassJudgesId" Type="int" />
+          <Property Name="ShowHorsesId" Type="int" />
+          <Property Name="Type" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="HandN" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="BandT" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Legs" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Move" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="Date" Type="datetime" />
+          <Property Name="HorseCatalog" Type="nvarchar" MaxLength="60" />
+          <Property Name="IpadUdid" Type="nvarchar" MaxLength="120" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="ShowClassId" Type="int" />
+          <Property Name="SumScore" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="JudgeCode" Type="nvarchar" MaxLength="120" />
+          <Property Name="JudgeName" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="RegistrationForApproval">
+          <Key>
+            <PropertyRef Name="RegistrationForApprovalId" />
+          </Key>
+          <Property Name="HorseRegistrationId" Type="int" Nullable="false" />
+          <Property Name="RegistrationReferenceNo" Type="int" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="HorseNameEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="SireEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="SireAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="DamEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="DamAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="255" />
+          <Property Name="SexAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Color" Type="nvarchar" MaxLength="255" />
+          <Property Name="ColorAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="HorseBreederName" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseBreederNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorseBreederAddress" Type="nvarchar(max)" />
+          <Property Name="HorseBreederAdreessAr" Type="nvarchar(max)" />
+          <Property Name="HbCountryEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="HbCountryAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="HorsePassportCopy" Type="nvarchar(max)" />
+          <Property Name="OwnerName" Type="nvarchar" MaxLength="255" />
+          <Property Name="OwnerNameAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="AddressEn" Type="nvarchar(max)" />
+          <Property Name="AddressAr" Type="nvarchar(max)" />
+          <Property Name="POBox" Type="nvarchar" MaxLength="255" />
+          <Property Name="POBoxAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="City" Type="nvarchar" MaxLength="255" />
+          <Property Name="CityAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Country" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Telephone" Type="nvarchar" MaxLength="255" />
+          <Property Name="TelephoneAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Fax" Type="nvarchar" MaxLength="255" />
+          <Property Name="FaxAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="255" />
+          <Property Name="MobileAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="ECAHOClasses" Type="nvarchar" MaxLength="255" />
+          <Property Name="ECAHOClassesAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="NonECAHOClasses" Type="nvarchar" MaxLength="255" />
+          <Property Name="NonECAHOClassesAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="OwnerPassportCopy" Type="nvarchar(max)" />
+          <Property Name="DateEn" Type="datetime" />
+          <Property Name="IsApprove" Type="bit" />
+          <Property Name="ShowNameHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="ShowNameHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="DateHr" Type="datetime" />
+          <Property Name="ClassHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClassHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlaceHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="PlaceHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="CountryHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="PositionHrEn" Type="nvarchar" MaxLength="255" />
+          <Property Name="PositionHrAr" Type="nvarchar" MaxLength="255" />
+          <Property Name="IsCatalogDelete" Type="bit" Nullable="false" />
+          <Property Name="RegistrationForApprovalId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="StatusId" Type="int" />
+          <Property Name="ApproverComments" Type="nvarchar(max)" />
+          <Property Name="ApprovedBy" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleName" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="RoleMenuAuthorization">
+          <Key>
+            <PropertyRef Name="RoleMenuAuthorizationId" />
+          </Key>
+          <Property Name="RoleMenuAuthorizationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="MenuId" Type="int" />
+        </EntityType>
+        <EntityType Name="ScoreSystem">
+          <Key>
+            <PropertyRef Name="ScoreSystemId" />
+          </Key>
+          <Property Name="ScoreSystemId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ScoreSystemName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Show">
+          <Key>
+            <PropertyRef Name="ShowId" />
+          </Key>
+          <Property Name="ShowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowName" Type="nvarchar(max)" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="Location" Type="nvarchar" MaxLength="300" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="EndDate" Type="datetime" />
+          <Property Name="IsPointFive" Type="bit" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="ShowTypeId" Type="int" />
+          <Property Name="MaxJudgeNumber" Type="int" />
+          <Property Name="MaxJudgePerClass" Type="int" />
+          <Property Name="ScoreSystemId" Type="int" />
+          <Property Name="ChampionshipMethodId" Type="int" />
+          <Property Name="MaxHorseInChampionship" Type="int" />
+        </EntityType>
+        <EntityType Name="ShowChampionship">
+          <Key>
+            <PropertyRef Name="ShowChampionshipId" />
+          </Key>
+          <Property Name="ShowChampionshipId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="ChampionshipId" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="ShowChampionshipJudges">
+          <Key>
+            <PropertyRef Name="ChampionshipJudgesId" />
+          </Key>
+          <Property Name="ChampionshipJudgesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="ShowJudgeId" Type="int" />
+          <Property Name="ShowChampionshipId" Type="int" />
+        </EntityType>
+        <EntityType Name="ShowClass">
+          <Key>
+            <PropertyRef Name="ShowClassId" />
+          </Key>
+          <Property Name="ShowClassId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="ShowClassName" Type="nvarchar" MaxLength="60" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsCompleted" Type="bit" />
+          <Property Name="BaseClass" Type="nvarchar" MaxLength="50" />
+          <Property Name="EachoClassName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ShowClassHorses">
+          <Key>
+            <PropertyRef Name="ShowClassHorsesId" />
+          </Key>
+          <Property Name="ShowClassHorsesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowClassId" Type="int" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="ShowHorseId" Type="int" />
+          <Property Name="IsCompleted" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="HorseScore" Type="decimal" Precision="18" Scale="3" />
+          <Property Name="RatedJudgesIDList" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="ShowClassJudges">
+          <Key>
+            <PropertyRef Name="ShowClassJudgesId" />
+          </Key>
+          <Property Name="ShowClassJudgesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="ShowClassId" Type="int" />
+          <Property Name="ShowJudgesId" Type="int" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShowForms">
+          <Key>
+            <PropertyRef Name="FormId" />
+          </Key>
+          <Property Name="FormId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" Nullable="false" />
+          <Property Name="FormName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShowHorses">
+          <Key>
+            <PropertyRef Name="ShowHorsesId" />
+          </Key>
+          <Property Name="ShowHorsesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="HorseId" Type="int" />
+          <Property Name="HorseCatalog" Type="nvarchar" MaxLength="60" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsCompleted" Type="bit" />
+        </EntityType>
+        <EntityType Name="ShowIpadUdid">
+          <Key>
+            <PropertyRef Name="ShowIpadUdidId" />
+          </Key>
+          <Property Name="ShowIpadUdidId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="IpadUdId" Type="nvarchar" MaxLength="60" />
+          <Property Name="IsAssigned" Type="bit" />
+          <Property Name="ShowJudgeCodeId" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="ShowJudgeCode">
+          <Key>
+            <PropertyRef Name="ShowJudgeCodeId" />
+          </Key>
+          <Property Name="ShowJudgeCodeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="JudgeCode" Type="nvarchar" MaxLength="60" />
+          <Property Name="IsAssigned" Type="bit" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="ShowJudges">
+          <Key>
+            <PropertyRef Name="ShowJudgesId" />
+          </Key>
+          <Property Name="ShowJudgesId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JudgeName" Type="nvarchar" MaxLength="120" />
+          <Property Name="JudgeCode" Type="nvarchar" MaxLength="60" />
+          <Property Name="IpadUdid" Type="nvarchar" MaxLength="120" />
+          <Property Name="ShowId" Type="int" />
+          <Property Name="JudgeId" Type="int" />
+          <Property Name="ShowJudgeCodeId" Type="int" />
+          <Property Name="ShowIpadUdidId" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="JudgeAbvr" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ShowType">
+          <Key>
+            <PropertyRef Name="ShowTypeId" />
+          </Key>
+          <Property Name="ShowTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ShowTypeName" Type="nvarchar" MaxLength="60" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="StatusId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="60" />
+          <Property Name="FullName" Type="nvarchar" MaxLength="120" />
+          <Property Name="Email" Type="nvarchar" MaxLength="120" />
+          <Property Name="Password" Type="nvarchar" MaxLength="15" />
+          <Property Name="Address" Type="nvarchar" MaxLength="120" />
+          <Property Name="City" Type="nvarchar" MaxLength="60" />
+          <Property Name="State" Type="nvarchar" MaxLength="60" />
+          <Property Name="Country" Type="nvarchar" MaxLength="60" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="IsActive" Type="bit" />
+        </EntityType>
+        <EntityType Name="WinnerType">
+          <Key>
+            <PropertyRef Name="WinnerTypeId" />
+          </Key>
+          <Property Name="WinnerTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="WinnerTypeName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Show2ModelStoreContainer">
+          <EntitySet Name="Catalog" EntityType="Self.Catalog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Championship" EntityType="Self.Championship" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChampionshipClasses" EntityType="Self.ChampionshipClasses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChampionshipMethod" EntityType="Self.ChampionshipMethod" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChampionshipRating" EntityType="Self.ChampionshipRating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChampionshipWinnertype" EntityType="Self.ChampionshipWinnertype" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EcahoClass" EntityType="Self.EcahoClass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Horse" EntityType="Self.Horse" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HorseRegistration" EntityType="Self.HorseRegistration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Judge" EntityType="Self.Judge" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MainClass" EntityType="Self.MainClass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Menu" EntityType="Self.Menu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rating" EntityType="Self.Rating" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RegistrationForApproval" EntityType="Self.RegistrationForApproval" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleMenuAuthorization" EntityType="Self.RoleMenuAuthorization" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScoreSystem" EntityType="Self.ScoreSystem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Show" EntityType="Self.Show" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowChampionship" EntityType="Self.ShowChampionship" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowChampionshipJudges" EntityType="Self.ShowChampionshipJudges" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowClass" EntityType="Self.ShowClass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowClassHorses" EntityType="Self.ShowClassHorses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowClassJudges" EntityType="Self.ShowClassJudges" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowForms" EntityType="Self.ShowForms" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowHorses" EntityType="Self.ShowHorses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowIpadUdid" EntityType="Self.ShowIpadUdid" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowJudgeCode" EntityType="Self.ShowJudgeCode" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowJudges" EntityType="Self.ShowJudges" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ShowType" EntityType="Self.ShowType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Status" EntityType="Self.Status" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WinnerType" EntityType="Self.WinnerType" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Show2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Catalog">
+          <Key>
+            <PropertyRef Name="CatalogId" />
+          </Key>
+          <Property Name="CatalogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HorseRegistrationId" Type="Int32" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="RegistrationReferenceNo" Type="Int32" />
+          <Property Name="HorseNameEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SireEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SireAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DamEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DamAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="SexAr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ColorAr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="HorseBreederName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederAdreessAr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HbCountryEn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HbCountryAr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="HorsePassportCopy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AddressEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressAr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POBox" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="POBoxAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CityAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CountryAr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TelephoneAr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FaxAr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MobileAr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ECAHOClasses" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ECAHOClassesAr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NonECAHOClasses" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="NonECAHOClassesAr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerPassportCopy" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateEn" Type="DateTime" Precision="3" />
+          <Property Name="IsApprove" Type="Boolean" />
+          <Property Name="ShowNameHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ShowNameHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateHr" Type="DateTime" Precision="3" />
+          <Property Name="ClassHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ClassHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CountryHrEn" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CountryHrAr" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="PositionHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PositionHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="CatalogNumber" Type="Int32" />
+          <Property Name="IsCatalogDelete" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsCompleted" Type="Boolean" />
+          <Property Name="RatedJudgesIDList" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="RatingDone" Type="Boolean" />
+          <Property Name="MobileCountry" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsExceptionCase" Type="Boolean" />
+          <Property Name="OwnerPassportImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="HorsePassportImageName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="RegisterUserName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ClassName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="IsSplit" Type="Boolean" Nullable="false" />
+          <Property Name="HorseScore" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Type" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Moves" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="BaseClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ShowHorseActive" Type="Boolean" />
+          <Property Name="Rank" Type="Int32" />
+          <Property Name="ChampionshipScore" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ChamionshipId" Type="Int32" />
+          <Property Name="WinnerTypeId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Championship">
+          <Key>
+            <PropertyRef Name="ChampionshipId" />
+          </Key>
+          <Property Name="ChampionshipId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChampionshipName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ChampionshipClass">
+          <Key>
+            <PropertyRef Name="ChampionshipClassesId" />
+          </Key>
+          <Property Name="ChampionshipClassesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChampionshipId" Type="Int32" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="ShowClassId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ChampionshipMethod">
+          <Key>
+            <PropertyRef Name="ChampionshipMethodId" />
+          </Key>
+          <Property Name="ChampionshipMethodId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChampionshipMethodName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ChampionshipRating">
+          <Key>
+            <PropertyRef Name="ChampionshipRatingId" />
+          </Key>
+          <Property Name="ChampionshipRatingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WinnerTypeId" Type="Int32" />
+          <Property Name="ChampionShipJudgeId" Type="Int32" />
+          <Property Name="HorseCatalog" Type="Int32" />
+          <Property Name="IpadUdid" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="Showid" Type="Int32" />
+          <Property Name="ChampionshipId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="CountryId" />
+          </Key>
+          <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="EcahoClass">
+          <Key>
+            <PropertyRef Name="EcahoClassId" />
+          </Key>
+          <Property Name="EcahoClassId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EcahoClassName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Horse">
+          <Key>
+            <PropertyRef Name="HorseId" />
+          </Key>
+          <Property Name="HorseId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="HorseName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="HorsePassport" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="OwnerName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerAddress" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="IsApprove" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="HorseRegistration">
+          <Key>
+            <PropertyRef Name="HorseRegistrationId" />
+          </Key>
+          <Property Name="HorseRegistrationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegistrationReferenceNo" Type="Int32" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="HorseNameEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SireEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SireAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DamEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DamAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SexAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ColorAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="HorseBreederName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederAdreessAr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HbCountryEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HbCountryAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorsePassportCopy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AddressEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressAr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POBox" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="POBoxAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CityAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CountryAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TelephoneAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FaxAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MobileAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ECAHOClasses" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ECAHOClassesAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NonECAHOClasses" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NonECAHOClassesAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerPassportCopy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateEn" Type="DateTime" Precision="3" />
+          <Property Name="IsApprove" Type="Boolean" />
+          <Property Name="ShowNameHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ShowNameHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateHr" Type="DateTime" Precision="3" />
+          <Property Name="ClassHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ClassHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CountryHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CountryHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PositionHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PositionHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsCatalogDelete" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Judge">
+          <Key>
+            <PropertyRef Name="JudgeId" />
+          </Key>
+          <Property Name="JudgeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="CountryId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="MainClass">
+          <Key>
+            <PropertyRef Name="MainClassId" />
+          </Key>
+          <Property Name="MainClassId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClassName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="StartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ModifiedBy" Type="Int32" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="ClassAbv" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Menu">
+          <Key>
+            <PropertyRef Name="MenuId" />
+          </Key>
+          <Property Name="MenuId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MenuUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Rating">
+          <Key>
+            <PropertyRef Name="RatingId" />
+          </Key>
+          <Property Name="RatingId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowClassJudgesId" Type="Int32" />
+          <Property Name="ShowHorsesId" Type="Int32" />
+          <Property Name="Type" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="HandN" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="BandT" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Legs" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Move" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="Date" Type="DateTime" Precision="3" />
+          <Property Name="HorseCatalog" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="IpadUdid" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="ShowClassId" Type="Int32" />
+          <Property Name="SumScore" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="JudgeCode" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="JudgeName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RegistrationForApproval">
+          <Key>
+            <PropertyRef Name="RegistrationForApprovalId" />
+          </Key>
+          <Property Name="HorseRegistrationId" Type="Int32" Nullable="false" />
+          <Property Name="RegistrationReferenceNo" Type="Int32" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="HorseNameEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SireEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SireAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DamEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DamAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Sex" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="SexAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Color" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ColorAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="HorseBreederName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HorseBreederAdreessAr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HbCountryEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HbCountryAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="HorsePassportCopy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerNameAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="AddressEn" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AddressAr" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="POBox" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="POBoxAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CityAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CountryAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Telephone" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TelephoneAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Fax" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="FaxAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="MobileAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ECAHOClasses" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ECAHOClassesAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NonECAHOClasses" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="NonECAHOClassesAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="OwnerPassportCopy" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DateEn" Type="DateTime" Precision="3" />
+          <Property Name="IsApprove" Type="Boolean" />
+          <Property Name="ShowNameHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ShowNameHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="DateHr" Type="DateTime" Precision="3" />
+          <Property Name="ClassHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ClassHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PlaceHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CountryHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CountryHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PositionHrEn" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PositionHrAr" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="IsCatalogDelete" Type="Boolean" Nullable="false" />
+          <Property Name="RegistrationForApprovalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="StatusId" Type="Int32" />
+          <Property Name="ApproverComments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ApprovedBy" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="RoleMenuAuthorization">
+          <Key>
+            <PropertyRef Name="RoleMenuAuthorizationId" />
+          </Key>
+          <Property Name="RoleMenuAuthorizationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="MenuId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ScoreSystem">
+          <Key>
+            <PropertyRef Name="ScoreSystemId" />
+          </Key>
+          <Property Name="ScoreSystemId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ScoreSystemName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Show">
+          <Key>
+            <PropertyRef Name="ShowId" />
+          </Key>
+          <Property Name="ShowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="Location" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="EndDate" Type="DateTime" Precision="3" />
+          <Property Name="IsPointFive" Type="Boolean" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="ShowTypeId" Type="Int32" />
+          <Property Name="MaxJudgeNumber" Type="Int32" />
+          <Property Name="MaxJudgePerClass" Type="Int32" />
+          <Property Name="ScoreSystemId" Type="Int32" />
+          <Property Name="ChampionshipMethodId" Type="Int32" />
+          <Property Name="MaxHorseInChampionship" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ShowChampionship">
+          <Key>
+            <PropertyRef Name="ShowChampionshipId" />
+          </Key>
+          <Property Name="ShowChampionshipId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="ChampionshipId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ShowChampionshipJudge">
+          <Key>
+            <PropertyRef Name="ChampionshipJudgesId" />
+          </Key>
+          <Property Name="ChampionshipJudgesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="ShowJudgeId" Type="Int32" />
+          <Property Name="ShowChampionshipId" Type="Int32" />
+        </EntityType>
+        <EntityType Name="ShowClass">
+          <Key>
+            <PropertyRef Name="ShowClassId" />
+          </Key>
+          <Property Name="ShowClassId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="ShowClassName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsCompleted" Type="Boolean" />
+          <Property Name="BaseClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EachoClassName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ShowClassHors">
+          <Key>
+            <PropertyRef Name="ShowClassHorsesId" />
+          </Key>
+          <Property Name="ShowClassHorsesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowClassId" Type="Int32" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="ShowHorseId" Type="Int32" />
+          <Property Name="IsCompleted" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="HorseScore" Type="Decimal" Precision="18" Scale="3" />
+          <Property Name="RatedJudgesIDList" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ShowClassJudge">
+          <Key>
+            <PropertyRef Name="ShowClassJudgesId" />
+          </Key>
+          <Property Name="ShowClassJudgesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="ShowClassId" Type="Int32" />
+          <Property Name="ShowJudgesId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShowForm">
+          <Key>
+            <PropertyRef Name="FormId" />
+          </Key>
+          <Property Name="FormId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowId" Type="Int32" Nullable="false" />
+          <Property Name="FormName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ShowHors">
+          <Key>
+            <PropertyRef Name="ShowHorsesId" />
+          </Key>
+          <Property Name="ShowHorsesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="HorseId" Type="Int32" />
+          <Property Name="HorseCatalog" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsCompleted" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ShowIpadUdid">
+          <Key>
+            <PropertyRef Name="ShowIpadUdidId" />
+          </Key>
+          <Property Name="ShowIpadUdidId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="IpadUdId" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="IsAssigned" Type="Boolean" />
+          <Property Name="ShowJudgeCodeId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ShowJudgeCode">
+          <Key>
+            <PropertyRef Name="ShowJudgeCodeId" />
+          </Key>
+          <Property Name="ShowJudgeCodeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="JudgeCode" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="IsAssigned" Type="Boolean" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ShowJudge">
+          <Key>
+            <PropertyRef Name="ShowJudgesId" />
+          </Key>
+          <Property Name="ShowJudgesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="JudgeName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="JudgeCode" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="IpadUdid" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="JudgeId" Type="Int32" />
+          <Property Name="ShowJudgeCodeId" Type="Int32" />
+          <Property Name="ShowIpadUdidId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="JudgeAbvr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ShowType">
+          <Key>
+            <PropertyRef Name="ShowTypeId" />
+          </Key>
+          <Property Name="ShowTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ShowTypeName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Status">
+          <Key>
+            <PropertyRef Name="StatusId" />
+          </Key>
+          <Property Name="StatusId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="FullName" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="120" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="Country" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="WinnerType">
+          <Key>
+            <PropertyRef Name="WinnerTypeId" />
+          </Key>
+          <Property Name="WinnerTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="WinnerTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="QrecApiEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Catalogs" EntityType="Self.Catalog" />
+          <EntitySet Name="Championships" EntityType="Self.Championship" />
+          <EntitySet Name="ChampionshipClasses" EntityType="Self.ChampionshipClass" />
+          <EntitySet Name="ChampionshipMethods" EntityType="Self.ChampionshipMethod" />
+          <EntitySet Name="ChampionshipRatings" EntityType="Self.ChampionshipRating" />
+          <EntitySet Name="Countries" EntityType="Self.Country" />
+          <EntitySet Name="EcahoClasses" EntityType="Self.EcahoClass" />
+          <EntitySet Name="Horses" EntityType="Self.Horse" />
+          <EntitySet Name="HorseRegistrations" EntityType="Self.HorseRegistration" />
+          <EntitySet Name="Judges" EntityType="Self.Judge" />
+          <EntitySet Name="MainClasses" EntityType="Self.MainClass" />
+          <EntitySet Name="Menus" EntityType="Self.Menu" />
+          <EntitySet Name="Ratings" EntityType="Self.Rating" />
+          <EntitySet Name="RegistrationForApprovals" EntityType="Self.RegistrationForApproval" />
+          <EntitySet Name="Roles" EntityType="Self.Role" />
+          <EntitySet Name="RoleMenuAuthorizations" EntityType="Self.RoleMenuAuthorization" />
+          <EntitySet Name="ScoreSystems" EntityType="Self.ScoreSystem" />
+          <EntitySet Name="Shows" EntityType="Self.Show" />
+          <EntitySet Name="ShowChampionships" EntityType="Self.ShowChampionship" />
+          <EntitySet Name="ShowChampionshipJudges" EntityType="Self.ShowChampionshipJudge" />
+          <EntitySet Name="ShowClasses" EntityType="Self.ShowClass" />
+          <EntitySet Name="ShowClassHorses" EntityType="Self.ShowClassHors" />
+          <EntitySet Name="ShowClassJudges" EntityType="Self.ShowClassJudge" />
+          <EntitySet Name="ShowForms" EntityType="Self.ShowForm" />
+          <EntitySet Name="ShowHorses" EntityType="Self.ShowHors" />
+          <EntitySet Name="ShowIpadUdids" EntityType="Self.ShowIpadUdid" />
+          <EntitySet Name="ShowJudgeCodes" EntityType="Self.ShowJudgeCode" />
+          <EntitySet Name="ShowJudges" EntityType="Self.ShowJudge" />
+          <EntitySet Name="ShowTypes" EntityType="Self.ShowType" />
+          <EntitySet Name="Status" EntityType="Self.Status" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="WinnerTypes" EntityType="Self.WinnerType" />
+          <EntitySet Name="ChampionshipWinnertypes" EntityType="Show2Model.ChampionshipWinnertype" />
+        </EntityContainer>
+        <EntityType Name="ChampionshipWinnertype">
+          <Key>
+            <PropertyRef Name="ChampionshipWinnertypeId" />
+          </Key>
+          <Property Name="ChampionshipWinnertypeId" Type="Int32" Nullable="false" />
+          <Property Name="ShowId" Type="Int32" />
+          <Property Name="WinnertypeId" Type="Int32" />
+          <Property Name="ChampionshipId" Type="Int32" />
+          <Property Name="IsActive" Type="Boolean" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Show2ModelStoreContainer" CdmEntityContainer="QrecApiEntities">
+          <EntitySetMapping Name="Catalogs">
+            <EntityTypeMapping TypeName="Show2Model.Catalog">
+              <MappingFragment StoreEntitySet="Catalog">
+                <ScalarProperty Name="WinnerTypeId" ColumnName="WinnerTypeId" />
+                <ScalarProperty Name="CatalogId" ColumnName="CatalogId" />
+                <ScalarProperty Name="HorseRegistrationId" ColumnName="HorseRegistrationId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="RegistrationReferenceNo" ColumnName="RegistrationReferenceNo" />
+                <ScalarProperty Name="HorseNameEn" ColumnName="HorseNameEn" />
+                <ScalarProperty Name="HorseNameAr" ColumnName="HorseNameAr" />
+                <ScalarProperty Name="SireEn" ColumnName="SireEn" />
+                <ScalarProperty Name="SireAr" ColumnName="SireAr" />
+                <ScalarProperty Name="DamEn" ColumnName="DamEn" />
+                <ScalarProperty Name="DamAr" ColumnName="DamAr" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="SexAr" ColumnName="SexAr" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="ColorAr" ColumnName="ColorAr" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="HorseBreederName" ColumnName="HorseBreederName" />
+                <ScalarProperty Name="HorseBreederNameAr" ColumnName="HorseBreederNameAr" />
+                <ScalarProperty Name="HorseBreederAddress" ColumnName="HorseBreederAddress" />
+                <ScalarProperty Name="HorseBreederAdreessAr" ColumnName="HorseBreederAdreessAr" />
+                <ScalarProperty Name="HbCountryEn" ColumnName="HbCountryEn" />
+                <ScalarProperty Name="HbCountryAr" ColumnName="HbCountryAr" />
+                <ScalarProperty Name="HorsePassportCopy" ColumnName="HorsePassportCopy" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="OwnerNameAr" ColumnName="OwnerNameAr" />
+                <ScalarProperty Name="AddressEn" ColumnName="AddressEn" />
+                <ScalarProperty Name="AddressAr" ColumnName="AddressAr" />
+                <ScalarProperty Name="POBox" ColumnName="POBox" />
+                <ScalarProperty Name="POBoxAr" ColumnName="POBoxAr" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CityAr" ColumnName="CityAr" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="CountryAr" ColumnName="CountryAr" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="TelephoneAr" ColumnName="TelephoneAr" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="FaxAr" ColumnName="FaxAr" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="MobileAr" ColumnName="MobileAr" />
+                <ScalarProperty Name="ECAHOClasses" ColumnName="ECAHOClasses" />
+                <ScalarProperty Name="ECAHOClassesAr" ColumnName="ECAHOClassesAr" />
+                <ScalarProperty Name="NonECAHOClasses" ColumnName="NonECAHOClasses" />
+                <ScalarProperty Name="NonECAHOClassesAr" ColumnName="NonECAHOClassesAr" />
+                <ScalarProperty Name="OwnerPassportCopy" ColumnName="OwnerPassportCopy" />
+                <ScalarProperty Name="DateEn" ColumnName="DateEn" />
+                <ScalarProperty Name="IsApprove" ColumnName="IsApprove" />
+                <ScalarProperty Name="ShowNameHrEn" ColumnName="ShowNameHrEn" />
+                <ScalarProperty Name="ShowNameHrAr" ColumnName="ShowNameHrAr" />
+                <ScalarProperty Name="DateHr" ColumnName="DateHr" />
+                <ScalarProperty Name="ClassHrEn" ColumnName="ClassHrEn" />
+                <ScalarProperty Name="ClassHrAr" ColumnName="ClassHrAr" />
+                <ScalarProperty Name="PlaceHrEn" ColumnName="PlaceHrEn" />
+                <ScalarProperty Name="PlaceHrAr" ColumnName="PlaceHrAr" />
+                <ScalarProperty Name="CountryHrEn" ColumnName="CountryHrEn" />
+                <ScalarProperty Name="CountryHrAr" ColumnName="CountryHrAr" />
+                <ScalarProperty Name="PositionHrEn" ColumnName="PositionHrEn" />
+                <ScalarProperty Name="PositionHrAr" ColumnName="PositionHrAr" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="CatalogNumber" ColumnName="CatalogNumber" />
+                <ScalarProperty Name="IsCatalogDelete" ColumnName="IsCatalogDelete" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="RatedJudgesIDList" ColumnName="RatedJudgesIDList" />
+                <ScalarProperty Name="RatingDone" ColumnName="RatingDone" />
+                <ScalarProperty Name="MobileCountry" ColumnName="MobileCountry" />
+                <ScalarProperty Name="IsExceptionCase" ColumnName="IsExceptionCase" />
+                <ScalarProperty Name="OwnerPassportImageName" ColumnName="OwnerPassportImageName" />
+                <ScalarProperty Name="HorsePassportImageName" ColumnName="HorsePassportImageName" />
+                <ScalarProperty Name="RegisterUserName" ColumnName="RegisterUserName" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="IsSplit" ColumnName="IsSplit" />
+                <ScalarProperty Name="HorseScore" ColumnName="HorseScore" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Moves" ColumnName="Moves" />
+                <ScalarProperty Name="BaseClassName" ColumnName="BaseClassName" />
+                <ScalarProperty Name="ShowHorseActive" ColumnName="ShowHorseActive" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="ChampionshipScore" ColumnName="ChampionshipScore" />
+                <ScalarProperty Name="ChamionshipId" ColumnName="ChamionshipId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Championships">
+            <EntityTypeMapping TypeName="Show2Model.Championship">
+              <MappingFragment StoreEntitySet="Championship">
+                <ScalarProperty Name="ChampionshipId" ColumnName="ChampionshipId" />
+                <ScalarProperty Name="ChampionshipName" ColumnName="ChampionshipName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChampionshipClasses">
+            <EntityTypeMapping TypeName="Show2Model.ChampionshipClass">
+              <MappingFragment StoreEntitySet="ChampionshipClasses">
+                <ScalarProperty Name="ChampionshipClassesId" ColumnName="ChampionshipClassesId" />
+                <ScalarProperty Name="ChampionshipId" ColumnName="ChampionshipId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ShowClassId" ColumnName="ShowClassId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChampionshipMethods">
+            <EntityTypeMapping TypeName="Show2Model.ChampionshipMethod">
+              <MappingFragment StoreEntitySet="ChampionshipMethod">
+                <ScalarProperty Name="ChampionshipMethodId" ColumnName="ChampionshipMethodId" />
+                <ScalarProperty Name="ChampionshipMethodName" ColumnName="ChampionshipMethodName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChampionshipRatings">
+            <EntityTypeMapping TypeName="Show2Model.ChampionshipRating">
+              <MappingFragment StoreEntitySet="ChampionshipRating">
+                <ScalarProperty Name="ChampionshipRatingId" ColumnName="ChampionshipRatingId" />
+                <ScalarProperty Name="WinnerTypeId" ColumnName="WinnerTypeId" />
+                <ScalarProperty Name="ChampionShipJudgeId" ColumnName="ChampionShipJudgeId" />
+                <ScalarProperty Name="HorseCatalog" ColumnName="HorseCatalog" />
+                <ScalarProperty Name="IpadUdid" ColumnName="IpadUdid" />
+                <ScalarProperty Name="Showid" ColumnName="Showid" />
+                <ScalarProperty Name="ChampionshipId" ColumnName="ChampionshipId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="Show2Model.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="CountryName" ColumnName="CountryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EcahoClasses">
+            <EntityTypeMapping TypeName="Show2Model.EcahoClass">
+              <MappingFragment StoreEntitySet="EcahoClass">
+                <ScalarProperty Name="EcahoClassId" ColumnName="EcahoClassId" />
+                <ScalarProperty Name="EcahoClassName" ColumnName="EcahoClassName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Horses">
+            <EntityTypeMapping TypeName="Show2Model.Horse">
+              <MappingFragment StoreEntitySet="Horse">
+                <ScalarProperty Name="HorseId" ColumnName="HorseId" />
+                <ScalarProperty Name="HorseName" ColumnName="HorseName" />
+                <ScalarProperty Name="HorsePassport" ColumnName="HorsePassport" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="OwnerAddress" ColumnName="OwnerAddress" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="IsApprove" ColumnName="IsApprove" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HorseRegistrations">
+            <EntityTypeMapping TypeName="Show2Model.HorseRegistration">
+              <MappingFragment StoreEntitySet="HorseRegistration">
+                <ScalarProperty Name="HorseRegistrationId" ColumnName="HorseRegistrationId" />
+                <ScalarProperty Name="RegistrationReferenceNo" ColumnName="RegistrationReferenceNo" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="HorseNameEn" ColumnName="HorseNameEn" />
+                <ScalarProperty Name="HorseNameAr" ColumnName="HorseNameAr" />
+                <ScalarProperty Name="SireEn" ColumnName="SireEn" />
+                <ScalarProperty Name="SireAr" ColumnName="SireAr" />
+                <ScalarProperty Name="DamEn" ColumnName="DamEn" />
+                <ScalarProperty Name="DamAr" ColumnName="DamAr" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="SexAr" ColumnName="SexAr" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="ColorAr" ColumnName="ColorAr" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="HorseBreederName" ColumnName="HorseBreederName" />
+                <ScalarProperty Name="HorseBreederNameAr" ColumnName="HorseBreederNameAr" />
+                <ScalarProperty Name="HorseBreederAddress" ColumnName="HorseBreederAddress" />
+                <ScalarProperty Name="HorseBreederAdreessAr" ColumnName="HorseBreederAdreessAr" />
+                <ScalarProperty Name="HbCountryEn" ColumnName="HbCountryEn" />
+                <ScalarProperty Name="HbCountryAr" ColumnName="HbCountryAr" />
+                <ScalarProperty Name="HorsePassportCopy" ColumnName="HorsePassportCopy" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="OwnerNameAr" ColumnName="OwnerNameAr" />
+                <ScalarProperty Name="AddressEn" ColumnName="AddressEn" />
+                <ScalarProperty Name="AddressAr" ColumnName="AddressAr" />
+                <ScalarProperty Name="POBox" ColumnName="POBox" />
+                <ScalarProperty Name="POBoxAr" ColumnName="POBoxAr" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CityAr" ColumnName="CityAr" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="CountryAr" ColumnName="CountryAr" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="TelephoneAr" ColumnName="TelephoneAr" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="FaxAr" ColumnName="FaxAr" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="MobileAr" ColumnName="MobileAr" />
+                <ScalarProperty Name="ECAHOClasses" ColumnName="ECAHOClasses" />
+                <ScalarProperty Name="ECAHOClassesAr" ColumnName="ECAHOClassesAr" />
+                <ScalarProperty Name="NonECAHOClasses" ColumnName="NonECAHOClasses" />
+                <ScalarProperty Name="NonECAHOClassesAr" ColumnName="NonECAHOClassesAr" />
+                <ScalarProperty Name="OwnerPassportCopy" ColumnName="OwnerPassportCopy" />
+                <ScalarProperty Name="DateEn" ColumnName="DateEn" />
+                <ScalarProperty Name="IsApprove" ColumnName="IsApprove" />
+                <ScalarProperty Name="ShowNameHrEn" ColumnName="ShowNameHrEn" />
+                <ScalarProperty Name="ShowNameHrAr" ColumnName="ShowNameHrAr" />
+                <ScalarProperty Name="DateHr" ColumnName="DateHr" />
+                <ScalarProperty Name="ClassHrEn" ColumnName="ClassHrEn" />
+                <ScalarProperty Name="ClassHrAr" ColumnName="ClassHrAr" />
+                <ScalarProperty Name="PlaceHrEn" ColumnName="PlaceHrEn" />
+                <ScalarProperty Name="PlaceHrAr" ColumnName="PlaceHrAr" />
+                <ScalarProperty Name="CountryHrEn" ColumnName="CountryHrEn" />
+                <ScalarProperty Name="CountryHrAr" ColumnName="CountryHrAr" />
+                <ScalarProperty Name="PositionHrEn" ColumnName="PositionHrEn" />
+                <ScalarProperty Name="PositionHrAr" ColumnName="PositionHrAr" />
+                <ScalarProperty Name="IsCatalogDelete" ColumnName="IsCatalogDelete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Judges">
+            <EntityTypeMapping TypeName="Show2Model.Judge">
+              <MappingFragment StoreEntitySet="Judge">
+                <ScalarProperty Name="JudgeId" ColumnName="JudgeId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MainClasses">
+            <EntityTypeMapping TypeName="Show2Model.MainClass">
+              <MappingFragment StoreEntitySet="MainClass">
+                <ScalarProperty Name="MainClassId" ColumnName="MainClassId" />
+                <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ClassAbv" ColumnName="ClassAbv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Menus">
+            <EntityTypeMapping TypeName="Show2Model.Menu">
+              <MappingFragment StoreEntitySet="Menu">
+                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+                <ScalarProperty Name="MenuUrl" ColumnName="MenuUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ratings">
+            <EntityTypeMapping TypeName="Show2Model.Rating">
+              <MappingFragment StoreEntitySet="Rating">
+                <ScalarProperty Name="RatingId" ColumnName="RatingId" />
+                <ScalarProperty Name="ShowClassJudgesId" ColumnName="ShowClassJudgesId" />
+                <ScalarProperty Name="ShowHorsesId" ColumnName="ShowHorsesId" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="HandN" ColumnName="HandN" />
+                <ScalarProperty Name="BandT" ColumnName="BandT" />
+                <ScalarProperty Name="Legs" ColumnName="Legs" />
+                <ScalarProperty Name="Move" ColumnName="Move" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="HorseCatalog" ColumnName="HorseCatalog" />
+                <ScalarProperty Name="IpadUdid" ColumnName="IpadUdid" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ShowClassId" ColumnName="ShowClassId" />
+                <ScalarProperty Name="SumScore" ColumnName="SumScore" />
+                <ScalarProperty Name="JudgeCode" ColumnName="JudgeCode" />
+                <ScalarProperty Name="JudgeName" ColumnName="JudgeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RegistrationForApprovals">
+            <EntityTypeMapping TypeName="Show2Model.RegistrationForApproval">
+              <MappingFragment StoreEntitySet="RegistrationForApproval">
+                <ScalarProperty Name="HorseRegistrationId" ColumnName="HorseRegistrationId" />
+                <ScalarProperty Name="RegistrationReferenceNo" ColumnName="RegistrationReferenceNo" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="HorseNameEn" ColumnName="HorseNameEn" />
+                <ScalarProperty Name="HorseNameAr" ColumnName="HorseNameAr" />
+                <ScalarProperty Name="SireEn" ColumnName="SireEn" />
+                <ScalarProperty Name="SireAr" ColumnName="SireAr" />
+                <ScalarProperty Name="DamEn" ColumnName="DamEn" />
+                <ScalarProperty Name="DamAr" ColumnName="DamAr" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="SexAr" ColumnName="SexAr" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="ColorAr" ColumnName="ColorAr" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="HorseBreederName" ColumnName="HorseBreederName" />
+                <ScalarProperty Name="HorseBreederNameAr" ColumnName="HorseBreederNameAr" />
+                <ScalarProperty Name="HorseBreederAddress" ColumnName="HorseBreederAddress" />
+                <ScalarProperty Name="HorseBreederAdreessAr" ColumnName="HorseBreederAdreessAr" />
+                <ScalarProperty Name="HbCountryEn" ColumnName="HbCountryEn" />
+                <ScalarProperty Name="HbCountryAr" ColumnName="HbCountryAr" />
+                <ScalarProperty Name="HorsePassportCopy" ColumnName="HorsePassportCopy" />
+                <ScalarProperty Name="OwnerName" ColumnName="OwnerName" />
+                <ScalarProperty Name="OwnerNameAr" ColumnName="OwnerNameAr" />
+                <ScalarProperty Name="AddressEn" ColumnName="AddressEn" />
+                <ScalarProperty Name="AddressAr" ColumnName="AddressAr" />
+                <ScalarProperty Name="POBox" ColumnName="POBox" />
+                <ScalarProperty Name="POBoxAr" ColumnName="POBoxAr" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CityAr" ColumnName="CityAr" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="CountryAr" ColumnName="CountryAr" />
+                <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+                <ScalarProperty Name="TelephoneAr" ColumnName="TelephoneAr" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="FaxAr" ColumnName="FaxAr" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="MobileAr" ColumnName="MobileAr" />
+                <ScalarProperty Name="ECAHOClasses" ColumnName="ECAHOClasses" />
+                <ScalarProperty Name="ECAHOClassesAr" ColumnName="ECAHOClassesAr" />
+                <ScalarProperty Name="NonECAHOClasses" ColumnName="NonECAHOClasses" />
+                <ScalarProperty Name="NonECAHOClassesAr" ColumnName="NonECAHOClassesAr" />
+                <ScalarProperty Name="OwnerPassportCopy" ColumnName="OwnerPassportCopy" />
+                <ScalarProperty Name="DateEn" ColumnName="DateEn" />
+                <ScalarProperty Name="IsApprove" ColumnName="IsApprove" />
+                <ScalarProperty Name="ShowNameHrEn" ColumnName="ShowNameHrEn" />
+                <ScalarProperty Name="ShowNameHrAr" ColumnName="ShowNameHrAr" />
+                <ScalarProperty Name="DateHr" ColumnName="DateHr" />
+                <ScalarProperty Name="ClassHrEn" ColumnName="ClassHrEn" />
+                <ScalarProperty Name="ClassHrAr" ColumnName="ClassHrAr" />
+                <ScalarProperty Name="PlaceHrEn" ColumnName="PlaceHrEn" />
+                <ScalarProperty Name="PlaceHrAr" ColumnName="PlaceHrAr" />
+                <ScalarProperty Name="CountryHrEn" ColumnName="CountryHrEn" />
+                <ScalarProperty Name="CountryHrAr" ColumnName="CountryHrAr" />
+                <ScalarProperty Name="PositionHrEn" ColumnName="PositionHrEn" />
+                <ScalarProperty Name="PositionHrAr" ColumnName="PositionHrAr" />
+                <ScalarProperty Name="IsCatalogDelete" ColumnName="IsCatalogDelete" />
+                <ScalarProperty Name="RegistrationForApprovalId" ColumnName="RegistrationForApprovalId" />
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="ApproverComments" ColumnName="ApproverComments" />
+                <ScalarProperty Name="ApprovedBy" ColumnName="ApprovedBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="Show2Model.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleMenuAuthorizations">
+            <EntityTypeMapping TypeName="Show2Model.RoleMenuAuthorization">
+              <MappingFragment StoreEntitySet="RoleMenuAuthorization">
+                <ScalarProperty Name="RoleMenuAuthorizationId" ColumnName="RoleMenuAuthorizationId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="MenuId" ColumnName="MenuId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScoreSystems">
+            <EntityTypeMapping TypeName="Show2Model.ScoreSystem">
+              <MappingFragment StoreEntitySet="ScoreSystem">
+                <ScalarProperty Name="ScoreSystemId" ColumnName="ScoreSystemId" />
+                <ScalarProperty Name="ScoreSystemName" ColumnName="ScoreSystemName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Shows">
+            <EntityTypeMapping TypeName="Show2Model.Show">
+              <MappingFragment StoreEntitySet="Show">
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ShowName" ColumnName="ShowName" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+                <ScalarProperty Name="IsPointFive" ColumnName="IsPointFive" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ShowTypeId" ColumnName="ShowTypeId" />
+                <ScalarProperty Name="MaxJudgeNumber" ColumnName="MaxJudgeNumber" />
+                <ScalarProperty Name="MaxJudgePerClass" ColumnName="MaxJudgePerClass" />
+                <ScalarProperty Name="ScoreSystemId" ColumnName="ScoreSystemId" />
+                <ScalarProperty Name="ChampionshipMethodId" ColumnName="ChampionshipMethodId" />
+                <ScalarProperty Name="MaxHorseInChampionship" ColumnName="MaxHorseInChampionship" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowChampionships">
+            <EntityTypeMapping TypeName="Show2Model.ShowChampionship">
+              <MappingFragment StoreEntitySet="ShowChampionship">
+                <ScalarProperty Name="ShowChampionshipId" ColumnName="ShowChampionshipId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ChampionshipId" ColumnName="ChampionshipId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowChampionshipJudges">
+            <EntityTypeMapping TypeName="Show2Model.ShowChampionshipJudge">
+              <MappingFragment StoreEntitySet="ShowChampionshipJudges">
+                <ScalarProperty Name="ChampionshipJudgesId" ColumnName="ChampionshipJudgesId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ShowJudgeId" ColumnName="ShowJudgeId" />
+                <ScalarProperty Name="ShowChampionshipId" ColumnName="ShowChampionshipId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowClasses">
+            <EntityTypeMapping TypeName="Show2Model.ShowClass">
+              <MappingFragment StoreEntitySet="ShowClass">
+                <ScalarProperty Name="ShowClassId" ColumnName="ShowClassId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ShowClassName" ColumnName="ShowClassName" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="BaseClass" ColumnName="BaseClass" />
+                <ScalarProperty Name="EachoClassName" ColumnName="EachoClassName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowClassHorses">
+            <EntityTypeMapping TypeName="Show2Model.ShowClassHors">
+              <MappingFragment StoreEntitySet="ShowClassHorses">
+                <ScalarProperty Name="ShowClassHorsesId" ColumnName="ShowClassHorsesId" />
+                <ScalarProperty Name="ShowClassId" ColumnName="ShowClassId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ShowHorseId" ColumnName="ShowHorseId" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="HorseScore" ColumnName="HorseScore" />
+                <ScalarProperty Name="RatedJudgesIDList" ColumnName="RatedJudgesIDList" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowClassJudges">
+            <EntityTypeMapping TypeName="Show2Model.ShowClassJudge">
+              <MappingFragment StoreEntitySet="ShowClassJudges">
+                <ScalarProperty Name="ShowClassJudgesId" ColumnName="ShowClassJudgesId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ShowClassId" ColumnName="ShowClassId" />
+                <ScalarProperty Name="ShowJudgesId" ColumnName="ShowJudgesId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowForms">
+            <EntityTypeMapping TypeName="Show2Model.ShowForm">
+              <MappingFragment StoreEntitySet="ShowForms">
+                <ScalarProperty Name="FormId" ColumnName="FormId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="FormName" ColumnName="FormName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowHorses">
+            <EntityTypeMapping TypeName="Show2Model.ShowHors">
+              <MappingFragment StoreEntitySet="ShowHorses">
+                <ScalarProperty Name="ShowHorsesId" ColumnName="ShowHorsesId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="HorseId" ColumnName="HorseId" />
+                <ScalarProperty Name="HorseCatalog" ColumnName="HorseCatalog" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsCompleted" ColumnName="IsCompleted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowIpadUdids">
+            <EntityTypeMapping TypeName="Show2Model.ShowIpadUdid">
+              <MappingFragment StoreEntitySet="ShowIpadUdid">
+                <ScalarProperty Name="ShowIpadUdidId" ColumnName="ShowIpadUdidId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="IpadUdId" ColumnName="IpadUdId" />
+                <ScalarProperty Name="IsAssigned" ColumnName="IsAssigned" />
+                <ScalarProperty Name="ShowJudgeCodeId" ColumnName="ShowJudgeCodeId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowJudgeCodes">
+            <EntityTypeMapping TypeName="Show2Model.ShowJudgeCode">
+              <MappingFragment StoreEntitySet="ShowJudgeCode">
+                <ScalarProperty Name="ShowJudgeCodeId" ColumnName="ShowJudgeCodeId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="JudgeCode" ColumnName="JudgeCode" />
+                <ScalarProperty Name="IsAssigned" ColumnName="IsAssigned" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowJudges">
+            <EntityTypeMapping TypeName="Show2Model.ShowJudge">
+              <MappingFragment StoreEntitySet="ShowJudges">
+                <ScalarProperty Name="ShowJudgesId" ColumnName="ShowJudgesId" />
+                <ScalarProperty Name="JudgeName" ColumnName="JudgeName" />
+                <ScalarProperty Name="JudgeCode" ColumnName="JudgeCode" />
+                <ScalarProperty Name="IpadUdid" ColumnName="IpadUdid" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="JudgeId" ColumnName="JudgeId" />
+                <ScalarProperty Name="ShowJudgeCodeId" ColumnName="ShowJudgeCodeId" />
+                <ScalarProperty Name="ShowIpadUdidId" ColumnName="ShowIpadUdidId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="JudgeAbvr" ColumnName="JudgeAbvr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ShowTypes">
+            <EntityTypeMapping TypeName="Show2Model.ShowType">
+              <MappingFragment StoreEntitySet="ShowType">
+                <ScalarProperty Name="ShowTypeId" ColumnName="ShowTypeId" />
+                <ScalarProperty Name="ShowTypeName" ColumnName="ShowTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Status">
+            <EntityTypeMapping TypeName="Show2Model.Status">
+              <MappingFragment StoreEntitySet="Status">
+                <ScalarProperty Name="StatusId" ColumnName="StatusId" />
+                <ScalarProperty Name="Status1" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Show2Model.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WinnerTypes">
+            <EntityTypeMapping TypeName="Show2Model.WinnerType">
+              <MappingFragment StoreEntitySet="WinnerType">
+                <ScalarProperty Name="WinnerTypeId" ColumnName="WinnerTypeId" />
+                <ScalarProperty Name="WinnerTypeName" ColumnName="WinnerTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChampionshipWinnertypes">
+            <EntityTypeMapping TypeName="Show2Model.ChampionshipWinnertype">
+              <MappingFragment StoreEntitySet="ChampionshipWinnertype">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ChampionshipId" ColumnName="ChampionshipId" />
+                <ScalarProperty Name="WinnertypeId" ColumnName="WinnertypeId" />
+                <ScalarProperty Name="ShowId" ColumnName="ShowId" />
+                <ScalarProperty Name="ChampionshipWinnertypeId" ColumnName="ChampionshipWinnertypeId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
